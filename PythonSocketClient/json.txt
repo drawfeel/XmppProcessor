@@ -1,0 +1,27 @@
+        {
+            "contentId": "VIDE1623209217633129",
+            "distribution": "CDN",
+            "accessAddr": "",
+            "presentInfo": {
+                "presentDeviceModel": [
+                    {
+                        "presentModel": "5027",
+                        "presentDevice": "小屏"
+                    }
+                ],
+                "displayInfo": {
+                    "duration": "0",
+                    "definitionGraph": "http://localhost:8080/photoAlbum/page/performance/img/2021/6/9/1623224166256_398_800x450.jpg",
+                    "title": "[朝闻天下]春晚揭秘·创意表演《牛起来》 尽显“牛”才华 展示“牛”颜值"
+                }
+            },
+            "correlationDef": {
+                "endTime": "00:02:30",
+                "availableDuration": "",
+                "correlationLive": [
+                    "ALL"
+                ],
+                "startTime": "00:02:15"
+            }
+        },
+     }
