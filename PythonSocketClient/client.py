@@ -2,7 +2,7 @@ import socket
 
 class Client():
     def send_msg(self):
-        LOCAL_PORT=7667
+        LOCAL_PORT=7779
         goon=True
         try:
             socket.setdefaulttimeout(5)
@@ -16,7 +16,8 @@ class Client():
                 s.send(msg.encode("utf-8"))
                 s.send("\r\n".encode("utf-8"))
 
-                s.send(msg.encode("utf-8"))
+                f = open('./json.txt', 'rb')
+                s.send(f.read())
                 s.send("\r\n".encode("utf-8"))
 
 #                data=s.recv(256)
