@@ -87,7 +87,7 @@ public class MyXMPPConnection {
         MultiUserChat c = null;
         for(int i = 0; i < converstions.size(); i ++) {
             Conversation conver = converstions.elementAt(i);
-            if(conver.getDest().indexOf(GROUP_ID) == 0) {
+            if(conver.getDest().indexOf(to) == 0) {
                 c = conver.getMultiChat();
                 break;
             }
@@ -106,6 +106,11 @@ public class MyXMPPConnection {
     public static void closeConnection(){
         if (instance != null) {
             try {
+                for(int j = 0; j < converstions.size(); j ++) {
+                    if(converstions.get(j).getMultiChat() != null) {
+                        converstions.get(j).getMultiChat().leave();
+                    }
+                }
                 instance.disconnect();
             } catch (Exception e) {
                 e.printStackTrace();
